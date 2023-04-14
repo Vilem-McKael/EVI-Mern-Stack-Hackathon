@@ -16,6 +16,7 @@ export default function OrderHistoryPage({ user, setUser }) {
     
     function handleSelectOrder(order) {
       setSelectedOrder(order);
+      console.log('this is our onclick func')
     } 
     
     useEffect(function() {

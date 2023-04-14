@@ -40,7 +40,9 @@ orderSchema.virtual('orderId').get(function() {
 });
 
 ////// additional virtuals for getting: 
-
+orderSchema.virtual('ordered').get(function() {
+  return this.lineItems.filter((item) => item.isPaid, 0);
+})
 
 
 // Static methods are callable on the Model (Order)
