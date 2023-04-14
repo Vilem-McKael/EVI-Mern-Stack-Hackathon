@@ -39,6 +39,10 @@ orderSchema.virtual('orderId').get(function() {
   return this.id.slice(-6).toUpperCase();
 });
 
+////// additional virtuals for getting: 
+
+
+
 // Static methods are callable on the Model (Order)
 orderSchema.statics.getCart = function(userId) {
   // 'this' is bound to the model (don't use an arrow function)

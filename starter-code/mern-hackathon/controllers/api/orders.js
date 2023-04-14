@@ -39,5 +39,5 @@ async function checkout(req, res) {
 
 async function getAllOrders(req, res) {
   const orders = await Order.find({user: req.user._id});
-  console.log('THIS IS OUR ORDERS',orders);
+  res.json(orders);
 }
